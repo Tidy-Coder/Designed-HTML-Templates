@@ -5,87 +5,118 @@
   <meta charset="utf-8">
   <title>Darken template</title>
   <style>
-body, html{
+body,
+html {
   padding: 0;
   margin: 0;
   font-family: system-ui;
   background: url(https://cdn.pixabay.com/photo/2022/05/24/11/43/home-office-7218315_960_720.png);
   background-position-x: center;
 }
-header, main, footer, .mainContentHere{
+header,
+main,
+footer,
+.mainContentHere,
+footer > div {
   width: 100vw;
 }
-div:has(> header), .mainContentHere, footer{
+div:has(> header),
+.mainContentHere,
+footer {
   min-height: 100vh;
 }
-div:has(> header), main, header, header > *, footer, .mainContentHere > div, footer > section{
+div:has(> header),
+main,
+header,
+header > *,
+footer,
+.mainContentHere > div,
+footer section,
+footer > div {
   display: flex;
 }
-div:has(> header), main, header > *, .mainContentHere > div, footer > section{
+div:has(> header),
+main,
+header > *,
+.mainContentHere > div,
+footer section {
   flex-direction: column;
   justify-content: center;
 }
-div:has(> header), main, header > *, .mainContentHere > div{
+div:has(> header),
+main,
+header > *,
+.mainContentHere > div {
   align-items: center;
 }
-header{
+header {
   border-bottom: 1px solid black;
   flex-wrap: wrap;
   background: #19100ee0;
 }
-h1{
+h1 {
   font-size: calc(15px + 1vw);
   flex-grow: 1;
   margin: 0;
   padding: 7px;
   color: #b0b192;
 }
-header > a{
+header > a {
   padding: 15px;
   text-decoration: none;
   color: black;
 }
-header > a:nth-child(odd){
+header > a:nth-child(odd) {
   background: #eb4d4b;
 }
-header > a:nth-child(odd):hover{
+header > a:nth-child(odd):hover {
   background: #fb5d5b;
 }
-header > a:nth-child(even){
+header > a:nth-child(even) {
   background: #f0932b;
 }
-header > a:nth-child(even):hover{
+header > a:nth-child(even):hover {
   background: #faa33b;
 }
-main{
+main {
   color: #eee;
   flex-grow: 1;
   background: #05050595;
   padding: 3vw;
   box-sizing: border-box;
 }
-main p, main h2{
+main p,
+main h2 {
   margin: 0;
 }
-main h2{
+main h2 {
   padding: 15px;
   font-size: calc(19px + 1vw);
 }
-footer{
-  background: linear-gradient(#2b0000e0, #050000e0);
-  padding: 15px;
-  box-sizing: border-box;
-  color: #b0b192;
+footer > div {
   justify-content: space-around;
   align-items: start;
   gap: 15px;
   flex-wrap: wrap;
 }
-footer > section{
-  display: flex;
+footer {
+  background: linear-gradient(#2b0000e0, #050000e0);
+  padding: 15px;
+  box-sizing: border-box;
+  color: #b0b192;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+footer > h3{
+  font-size: 5vw;
+  margin: 0;
+  padding: 15px;
+}
+footer section {
   gap: 5px;
 }
-.mainContentHere{
+.mainContentHere {
   backdrop-filter: saturate(1.2) grayscale(2);
   color: #eee;
   padding: 3vw;
@@ -96,32 +127,36 @@ footer > section{
   grid-template-columns: auto auto auto;
   gap: 15px;
 }
-.mainContentHere > div > p, .mainContentHere > div > h2{
+.mainContentHere > div > p,
+.mainContentHere > div > h2 {
   margin: 0;
 }
-.mainContentHere > div{
+.mainContentHere > div {
   border: 1px solid black;
-  background: #050505;
+  background: #050505ef;
+  box-shadow: 5px 5px 1px 0 black;
   border-radius: 5px;
   padding: 15px;
+  height: min-content;
   gap: 5px;
   flex-grow: 1;
 }
-@media screen and (min-width: 955px){
-  .mainContentHere{
+@media screen and (min-width: 955px) {
+  .mainContentHere {
     grid-template-columns: auto auto auto;
   }
 }
-@media screen and (max-width: 954px) and (min-width: 635px){
-  .mainContentHere{
+@media screen and (max-width: 954px) and (min-width: 635px) {
+  .mainContentHere {
     grid-template-columns: auto auto;
   }
 }
-@media screen and (max-width: 634px){
-  .mainContentHere{
+@media screen and (max-width: 634px) {
+  .mainContentHere {
     grid-template-columns: auto;
   }
 }
+
   </style>
 </head>
 
@@ -155,28 +190,31 @@ footer > section{
     </div>
   </section>
   <footer>
-    <section>
-      <h2>Contact</h2>
-      <a href="https://github.com/Tidy-Coder">On Github</a>
-      <a href="https://tidy-coder.blogspot.com/">My blog</a>
-      <a href="https://codepen.io/TidyCoder">On codepen</a>
-      <a href="https://codier.io/@TidyCoder">On codier</a>
-      <a href="https://t.me/TidycoderNews">On telegram</a>
-      <a href="https://dev.to/tidycoder">On dev</a>
-    </section>
-    <section>
-      <h2>Products</h2>
-      <ul>
-        <li>Web tools</li>
-        <li>Web design products</li>
-        <li>Python codes</li>
-        <li>Android apps</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Biographie</h2>
-      <p>I'm like evolution, learning, production, I'm trying to become more and more professional...</p>
-    </section>
+    <div>
+      <section>
+        <h2>Contact</h2>
+        <a href="https://github.com/Tidy-Coder">On Github</a>
+        <a href="https://tidy-coder.blogspot.com/">My blog</a>
+        <a href="https://codepen.io/TidyCoder">On codepen</a>
+        <a href="https://codier.io/@TidyCoder">On codier</a>
+        <a href="https://t.me/TidycoderNews">On telegram</a>
+        <a href="https://dev.to/tidycoder">On dev</a>
+      </section>
+      <section>
+        <h2>Products</h2>
+        <ul>
+          <li>Web tools</li>
+          <li>Web design products</li>
+          <li>Python codes</li>
+          <li>Android apps</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Biographie</h2>
+        <p>I'm like evolution, learning, production, I'm trying to become more and more professional...</p>
+      </section>
+    </div>
+    <h3>t<span style="color: red">I</span>dyc<span style="color: red">O</span>der</h3>
   </footer>
 </body>
 
