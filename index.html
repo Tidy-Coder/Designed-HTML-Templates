@@ -24,7 +24,6 @@
         display: flex;
         box-sizing: border-box;
         align-items: center;
-        color: white;
         text-decoration: none;
         min-width: min(255px, 100vw);
         min-height: min(255px, 100vw);
@@ -35,7 +34,9 @@
         border: 1px solid #333;
         border-radius: 15px;
         position: relative;
+        color: #aaa;
         z-index: 3;
+        transition: 1s all;
       }
       a:before{
         content: "";
@@ -50,7 +51,7 @@
       }
       a:hover{
         scale: 1.05;
-        color: #aaa;
+        color: white;
       }
       h3{
         color: white;
