@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TidyCoder learning</title>
+    <style>
+body > div{
+  min-height: 100vh;
+  color: #d2dae2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+body{
+  background: #1e272e;
+}
+body, html{
+  padding: 0;
+  margin: 0;
+}
+
+h1, body > div > h2{
+  letter-spacing: 1vw;
+}
+p{
+  letter-spacing: 0.25vw;
+  text-align: center;
+}
+h1, body > div > h2, p, .tidyCoderBy, .buttonRight button{
+  text-transform: uppercase;
+  font-family: Helvetica;
+}
+.tidyCoderBy, .backgroundTidyFilter, .backgroundTidy, .titleTidycoder img, .buttonRight div, .buttonRight img{
+  user-select: none;
+}
+main{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header{
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: start;
+}
+.buttonRight img{
+  width: 55px;
+  height: 55px;
+}
+.titleTidycoder, .buttonRight{
+  display: flex;
+  gap: 11px;
+}
+.buttonRight button{
+  background: #2c3e50;
+  border: none;
+  color: #d2dae2;
+  padding: 5px 25px;
+  border-radius: 2px;
+  transition: all 100ms;
+}
+.buttonRight button:hover{
+  background: #485460;
+}
+.buttonRight button:active{
+  background: #34495e;
+}
+.buttonRight div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 11px;
+}
+.titleTidycoder img{
+  width: 75px;
+  height: 75px;
+}
+.backgroundTidy, .backgroundTidyFilter{
+  height: 253px;
+  width: 253px;
+}
+.backgroundTidy{
+  position: absolute;
+  border-radius: 1px;
+  box-shadow: 5px 3px 1px 1px black;
+  transform: skewY(-19deg) rotate(19deg) rotateZ(15deg);
+}
+.backgroundTidyFilter{
+  position: absolute;
+  border-radius: 1px;
+  box-shadow: 5px 3px 1px 1px black;
+  transform: skewY(-19deg) rotate(19deg) rotateZ(15deg);
+  background: linear-gradient(-45deg, #ff757555 15%, #75000055 85%);
+  padding: 0;
+  margin: 0;
+}
+div:has(> .backgroundTidy){
+  position: fixed;
+  z-index: -1;
+}
+    </style>
+  </head>
+  <body>
+    <div>
+      <header>
+        <section class="titleTidycoder">
+          <img src="https://avatars.githubusercontent.com/u/157531579?s=400&u=b1bbecadc88eae3551db7ce120a475f12a408584&v=4"/>
+          <h2 class="tidyCoderBy">by tidycoder entreprise</h2>
+        </section>
+        <section class="buttonRight">
+          <button>home</button>
+          <button>dashboard</button>
+          <button>Courses</button>
+          <div><img src="https://cdn.pixabay.com/photo/2016/10/18/18/19/question-mark-1750942_960_720.png"/></div>
+        </section>
+      </header>
+      <main>
+        <div style='left: 100%;'>
+          <img src="https://avatars.githubusercontent.com/u/157531579?s=400&u=b1bbecadc88eae3551db7ce120a475f12a408584&v=4" class="backgroundTidy">
+          <p class="backgroundTidyFilter"></p>
+        </div>
+        <div>
+          <img src="https://avatars.githubusercontent.com/u/157531579?s=400&u=b1bbecadc88eae3551db7ce120a475f12a408584&v=4" class="backgroundTidy">
+          <p class="backgroundTidyFilter"></p>
+        </div>
+        <h1>tidy learning</h1>
+        <p>learn code for free, no registration required, free certification<br/>top learning, practical and theoretical<br/>for personnal and profesionnal learning</p>
+      </main>
+    </div>
+    <div>
+      <h2>superior Quality</h2>
+      <p>Courses of quality</p>
+    </div>
+  </body>
+</html>
