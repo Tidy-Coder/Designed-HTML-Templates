@@ -1,94 +1,104 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Designed HTML templates</title>
-    <style>
-      body, html{
-        margin: 0;
-      }
-      html{
-        padding: 0;
-      }
-      body{
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: black;
-        min-height: 100vh;
-        box-sizing: border-box;
-      }
-      a {
-        display: flex;
-        box-sizing: border-box;
-        align-items: center;
-        text-decoration: none;
-        min-width: min(255px, 100vw);
-        min-height: min(255px, 100vw);
-        height: fit-content;
-        justify-content: center;
-        flex-direction: column;
-        padding: 15px;
-        border: 1px solid #333;
-        border-radius: 15px;
-        position: relative;
-        color: #aaa;
-        z-index: 3;
-        transition: 100ms all;
-      }
-      a:before{
-        content: "";
-        display: block;
-        position: absolute;
-        border: 1px solid #333;
-        border-radius: 15px;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        backdrop-filter: blur(5px);
-      }
-      a:hover{
-        scale: 1.05;
-        color: white;
-      }
-      h3{
-        color: white;
-        font-family: ui-system;
-        font-size: 3vw;
-      }
-      h3 span{
-        color: red;
-        text-transform: uppercase;
-      }
-      iframe{
-        width: 50vw;
-        height: 50vh;
-      }
-      h1{
-        text-shadow: 0 0 5px black;
-        color: white;
-        font-size: 5vw;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Designed HTML templates</h1>
-    <div style="display: flex; gap: 1vw; flex-wrap: wrap; align-items: center;justify-content:center">
-      <a href="reading-template.html">Reading template</a>
-      <iframe src="reading-template.html"></iframe>
-      <a href="night-template.html">Night template</a>
-      <iframe src="night-template.html"></iframe>
-      <a href="day-template.html">Day template</a>
-      <iframe src="day-template.html"></iframe>
-      <a href="orange-template.html">Orange template</a>
-      <iframe src="orange-template.html"></iframe>
-      <a href="learning-template.html">Learning template</a>
-      <iframe src="learning-template.html"></iframe>
-      <a href="coding-template.html">Coding template</a>
-      <iframe src="coding-template.html"></iframe>
+
+<head>
+  <meta charset="utf-8">
+  <title>Designed HTML templates</title>
+  <style>
+body,
+html {
+  margin: 0;
+}
+html {
+  padding: 0;
+}
+body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+h3 {
+  color: white;
+  font-family: ui-system;
+  font-size: 3vw;
+}
+h3 span {
+  color: red;
+  text-transform: uppercase;
+}
+iframe {
+  width: min(max(50vw, 355px), 100vw - 30px);
+  height: max(50vh, 355px);
+}
+h1 {
+  text-shadow: 0 0 5px black;
+  color: white;
+  font-size: 5vw;
+}
+body > div {
+  display: flex;
+  gap: 1vw;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+body > div > div{
+  position: relative;
+}
+body > div > div > a{
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  border: 1x solid black;
+  background: #393;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: black;
+  border-radius: 3px;
+}
+body > div > div > a:hover{
+  background: #4a4;
+}
+body > div > div > a:active{
+  background: #393;
+}
+  </style>
+</head>
+
+<body>
+  <h1>Designed HTML templates</h1>
+  <div>
+    <div>
+      <a href="https://tidy-coder.github.io/Designed-HTML-Templates/reading-template.html">Reading template</a>
+      <iframe src="https://tidy-coder.github.io/Designed-HTML-Templates/reading-template.html"></iframe>
     </div>
-    <h3><span style="color: white; font-size: 1.5vw">by</span> t<span>i</span>dyc<span>o</span>der</h3>
-  </body>
+    <div>
+      <a href="https://tidy-coder.github.io/Designed-HTML-Templates/night-template.html">Night template</a>
+      <iframe src="https://tidy-coder.github.io/Designed-HTML-Templates/night-template.html"></iframe>
+    </div>
+    <div>
+      <a href="https://tidy-coder.github.io/Designed-HTML-Templates/day-template.html">Day template</a>
+      <iframe src="https://tidy-coder.github.io/Designed-HTML-Templates/day-template.html"></iframe>
+    </div>
+    <div>
+      <a href="https://tidy-coder.github.io/Designed-HTML-Templates/orange-template.html">Orange template</a>
+      <iframe src="https://tidy-coder.github.io/Designed-HTML-Templates/orange-template.html"></iframe>
+    </div>
+    <div>
+      <a href="https://tidy-coder.github.io/Designed-HTML-Templates/learning-template.html">Learning template</a>
+      <iframe src="https://tidy-coder.github.io/Designed-HTML-Templates/learning-template.html"></iframe>
+    </div>
+    <div>
+      <a href="https://tidy-coder.github.io/Designed-HTML-Templates/coding-template.html">Coding template</a>
+      <iframe src="https://tidy-coder.github.io/Designed-HTML-Templates/coding-template.html"></iframe>
+    </div>
+  </div>
+  <h3><span style="color: white; font-size: 1.5vw">by</span> t<span>i</span>dyc<span>o</span>der</h3>
+</body>
+
 </html>
