@@ -1,1 +1,420 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <title>Day template</title>
+  <style>
+body, html{
+  padding: 0;
+  margin: 0;
+}
+header{
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  font-family: Helvetica;
+  flex-direction: column;
+  position: relative;
+}
+header:after{
+  content: "";
+  background: linear-gradient(to right top, #ffffff, #ffff35);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15vw;
+  height: 15vw;
+  clip-path: circle(7.5vw at right top);
+  z-index: -1;
+}
+header:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#cce calc(100% - 35px) , #452525 100%);
+  z-index: -2;
+}
+.mainSiteHere{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1{
+  font-size: calc(0.5vw + 25px);
+}
+h2{
+  
+  font-size: calc(0.5vw + 15px);
+}
+header hr{
+  background: #452525;
+  height: 15px;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+header > div{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+header > div > div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+header > div > div > div{
+  width: 3px;
+  height: 29px;
+  position: relative;
+  top: 5px;
+  background: green;
+  transform: rotate(55deg);
+  animation: turnNow 1.5s infinite alternate;
+}
+header > div > div > div:nth-child(3n+0){
+  animation-delay: 0.35s
+}
+header > div > div > div:nth-child(5n+1){
+  animation-delay: 0.6s !important
+}
+header > div > div > div:nth-child(2n+2){
+  animation-delay: 0.9s !important
+}
+header > div > div > div:nth-child(7n+3){
+  animation-delay: 1s !important
+}
+.buttonsHere{
+  display: flex;
+  flex-wrap: wrap;
+}
+.buttonsHere a{
+  padding: 15px;
+  color: black;
+  text-decoration: none;
+}
+.buttonsHere a:nth-child(odd){
+  background: #05050535
+}
+.buttonsHere a:hover{
+  background: #ffff35;
+}
+.buttonsHere a:active{
+  background: #0000;
+}
+main{
+  background: #eee;
+}
+main section h2, main section p{
+  margin: 0;
+  padding: 15px;
+}
+main section p:before{
+  content: "";
+  margin-left: 15px;
+}
+main{
+  display: flex;
+  flex-wrap: wrap;
+}
+main section{
+  width: 555px;
+  max-width: 100vw;
+}
+footer{
+  background: #ffff95;
+  margin: 0;
+  padding: 2.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+footer > div{
+  display: flex;
+  justify-content: space-around;
+  width: 95vw;
+  flex-wrap: wrap;
+  gap: 1vw;
+}
+footer > div > section{
+  display: flex;
+  flex-direction: column;
+}
+footer > h3{
+  flex-grow: 1;
+  display: flex;
+  align-items: end;
+  padding: 15px;
+  font-size: calc(3vw + 15px);
+  margin: 0;
+  font-family: system-ui;
+}
+@keyframes turnNow{
+  from{
+    transform: rotate(55deg)
+  }
+  to{
+    transform: rotate(-55deg)
+  }
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <section class="buttonsHere">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">News</a>
+      <a href="#">Contact</a>
+      <a href="#">Blog</a>
+    </section>
+    <section class="mainSiteHere">
+      <h1>Day template</h1>
+      <h2>A beatiful template perfect at the day.</h2>
+    </section>
+    <div>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <hr />
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>New 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis posuere morbi leo urna molestie at elementum eu. Turpis in eu mi bibendum neque egestas. Tempor orci dapibus ultrices in. Orci ac auctor augue mauris augue neque.</p>
+    </section>
+    <section>
+      <h2>New 2</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis posuere morbi leo urna molestie at elementum eu. Turpis in eu mi bibendum neque egestas. Tempor orci dapibus ultrices in. Orci ac auctor augue mauris augue neque.</p>
+    </section>
+    <section>
+      <h2>New 3</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis posuere morbi leo urna molestie at elementum eu. Turpis in eu mi bibendum neque egestas. Tempor orci dapibus ultrices in. Orci ac auctor augue mauris augue neque.</p>
+    </section>
+  </main>
+  <footer>
+    <div>
+      <section>
+        <h2>Contact</h2>
+        <a href="https://github.com/Tidy-Coder">On Github</a>
+        <a href="https://tidy-coder.blogspot.com/">My blog</a>
+        <a href="https://codepen.io/TidyCoder">On codepen</a>
+        <a href="https://codier.io/@TidyCoder">On codier</a>
+        <a href="https://t.me/TidycoderNews">On telegram</a>
+        <a href="https://dev.to/tidycoder">On dev</a>
+      </section>
+      <section>
+        <h2>Products</h2>
+        <ul>
+          <li>Web tools</li>
+          <li>Web design products</li>
+          <li>Python codes</li>
+          <li>Android apps</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Biographie</h2>
+        <p>I'm like evolution, learning, production, I'm trying to become more and more professional...</p>
+      </section>
+    </div>
+    <h3>t<span style="color: red">I</span>dyc<span style="color: red">O</span>der</h3>
+  </footer>
+</body>
+
+</html>
