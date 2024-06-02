@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Orange theme</title>
+    <style>
+header > a, header, .divSearch, .divButtonNav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header{
+  background: #f0932b;
+  color: #f6e58d;
+  align-items: stretch;
+  flex-wrap: wrap;
+  padding: 1px 1px 1px 5vw;
+  margin: 0;
+}
+hr{
+  padding: 1px;
+  background: #ffbe76;
+  margin: 0;
+  border: 3px solid #f0932b;
+}
+body, html{
+  padding: 0;
+  margin: 0;
+  font-family: system-ui;
+  font-weight: 500;
+  background: #c7ecee;
+}
+h1{
+  padding: 0;
+  margin: 15px 5px;
+}
+header > a > img{
+  height: 48px;
+  width: 48px;
+  position: relative;
+  bottom: 5px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 3px black;
+  padding: 1px;
+  background: #2c3e50;
+  margin: 7px 1px;
+}
+header > a, header > a:hover, header > a:active, header > a:visited{
+  user-select: none;
+  color: #0c0c0c;
+  padding: 0;
+  margin: 0 3em 0 0;
+  text-decoration: none;
+}
+.divSearch, .divButtonNav, header > a, header > a:hover, header > a:active, header > a:visited{
+  border-bottom: 1px solid black;
+}
+.divSearch{
+  flex-grow: 5;
+  margin-right: 1em;
+}
+.divButtonNav{
+  margin-right: 1em;
+}
+input[type="search"]{
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background: #ffbe76;
+  width: 100%;
+  margin: 7px;
+}
+input[type="search"]:focus{
+  background: #f6e58d;
+  border: none;
+}
+.buttonNav div{
+  border: 3px solid #130f40;
+  width: 55px;
+  margin: 5px;
+}
+.buttonNav, .buttonNav:hover, .buttonNav:active{
+  background: #00000000;
+  border-radius: 0;
+  border: none;
+}
+.buttonNav:hover div{
+  box-shadow: 0 0 0 1px #130f40;
+}
+main > section > div::before{
+  content: "-";
+}
+main > section > div{
+  float: right;
+}
+main > section{
+  padding: 15px;
+  background: #dff9fb;
+  border: 1px solid #130f40;
+  box-shadow: 3px 3px 0 1px #eb4d4b;
+  margin: 11px;
+  position: relative;
+}
+main > section::after{
+  content: "-Announcement";
+  position: absolute;
+  padding: 15px;
+  background: #dff9fb;
+  border: 1px solid #130f40;
+  margin: 11px;
+  bottom: -30px;
+  font-size: 15px;
+}
+main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+footer{
+  background: #f0932b;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 15px;
+  justify-content: space-around;
+}
+footer > section > p, footer > section > h2, footer > section > a{
+  margin: 0;
+}
+footer > section > h2{
+  padding: 15px 0;
+}
+footer > section > a{
+  padding: 3px;
+}
+nav{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 0%;
+  color: #eee;
+  opacity: 0;
+  position: fixed;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  top: 0;
+  bottom: 0;
+  z-index: 9;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: #050505f9;
+  transition: 0.35s all;
+}
+.navShow{
+  opacity: 1;
+  width: calc(100% - 15px);
+}
+nav > a{
+  background: #151515aa;
+  padding: 5px;
+  transition: 0.25s all;
+  position: relative;
+  color: #eee;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav > a:nth-child(2n+0){
+  background: #050505aa;
+}
+nav > a::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 15%;
+  width: 4px;
+  background: #2c3e50;
+}
+nav > a::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 15%;
+  width: 4px;
+  background: #2c3e50;
+}
+nav > a:nth-child(2n+0)::after, nav > a:nth-child(2n+0)::before{
+  border-radius: 35%;
+  background: #c0392b;
+}
+nav > a:hover{
+  background: #252535aa;
+  color: #eee;
+  letter-spacing: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav > a:active{
+  background: #050505;
+  color: #eee;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav > button{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: large;
+  margin: 0;
+  background: #050505ee !important;
+  color: #eee;
+  border-radius: 50%;
+  border: none;
+  scale: 0.85;
+  z-index: 5;
+}
+nav > button:hover{
+  background: #353535ee !important;
+}
+nav > button:active{
+  background: #050505ee !important;
+}
+.readMore{
+  background: #d35400;
+  padding: 9px 17px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 1px 0px black;
+  transition: 0.15s all;
+  margin: 9px 5px;
+  letter-spacing: 1px;
+  color: #ecf0f1;
+}
+.readMore:hover{
+  padding: 10px 19px;
+}
+.readMore:hover::after{
+  content: "»";
+}
+.readMore:active{
+  background: #e67e22;
+}
+.divBodyZ{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #f0932b;
+  margin: 0;
+  padding: 0;
+  justify-content: space-evenly;
+}
+.divBodyZ:hover .readMore{
+  scale: 1.025;
+}
+footer > section{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+footer > hr{
+  border: none;
+  border-radius: 2px;
+}
+    </style>
+    <script>
+function navActive(){
+  document.getElementsByClassName("tidyNav")[0].classList.toggle("navShow");
+}
+document.addEventListener("click", function(tidyEvent){
+  if(!(document.getElementsByClassName("tidyNav")[0].contains(tidyEvent.target)) && document.getElementsByClassName("tidyNav")[0].classList.contains("navShow") && !(document.getElementsByClassName("buttonNav")[0].contains(tidyEvent.target))){
+    document.getElementsByClassName("tidyNav")[0].classList.toggle("navShow");
+  }
+});
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="https://codepen.io/TidyCoder/pen/gOyxPRZ">
+        <img src="https://tidy-coder.blogspot.com/favicon.ico" draggable="false"/>
+        <h1>idyCoder</h1>
+      </a>
+      <div class="divSearch">
+        <input type="search" placeholder="You can search here..."/>
+      </div>
+      <div class="divButtonNav">
+        <button class="buttonNav" onclick="navActive()"><div></div><div></div><div></div></button>
+      </div>
+    </header>
+    <hr style="position: relative; z-index: 1;"/>
+    <div class="divBodyZ">
+      <button class="readMore" onclick="window.open('http://alchimiste.org/')">Visit Alchimiste Site »</button>
+      <button class="readMore" onclick="window.open('https://www.wattpad.com/user/alchimiste-original')">Visit Alchimiste Books »</button>
+      <button class="readMore" onclick="window.open('https://tidy-coder.blogspot.com/')">Visit TidyCoder Blog »</button>
+    </div>
+    <hr style="position: relative; z-index: 1;"/>
+    <nav class="tidyNav">
+      <a>Home</a>
+      <a href="https://tidy-coder.blogspot.com/" target="_blank">Visit TidyCoder Blog</a>
+      <a>Contact</a>
+      <a href="http://alchimiste.org/" target="_blank">Visit Alchimiste Site</a>
+      <a href="https://www.wattpad.com/user/alchimiste-original" target="_blank">Visit Alchimiste Books</a>
+      <a href="https://github.com/Tidy-Coder" target="_blank">My github profile</a>
+      <a href="https://t.me/tidycoder_learning" target="_blank">My telegram canal</a>
+      <button onclick='document.getElementsByClassName("tidyNav")[0].classList.toggle("navShow");'>X</button>
+    </nav>
+    <main>
+      <section>
+        <h3>Welcome to TidyCoder Site</h3>
+        <p>This site oriented to coding, learning, and announcement.</p>
+        <div>27/03/2024</div>
+      </section>
+      <section>
+        <h3>Welcome to TidyCoder Site</h3>
+        <p>This site oriented to coding, learning, and announcement.</p>
+        <div>27/03/2024</div>
+      </section>
+      <section>
+        <h3>Welcome to TidyCoder Site</h3>
+        <p>This site oriented to coding, learning, and announcement.</p>
+        <div>27/03/2024</div>
+      </section>
+      <section>
+        <h3>Welcome to TidyCoder Site</h3>
+        <p>This site oriented to coding, learning, and announcement.</p>
+        <div>27/03/2024</div>
+      </section>
+      <section>
+        <h3>Welcome to TidyCoder Site</h3>
+        <p>This site oriented to coding, learning, and announcement.</p>
+        <div>27/03/2024</div>
+      </section>
+      <section>
+        <h3>Welcome to TidyCoder Site</h3>
+        <p>This site oriented to coding, learning, and announcement.</p>
+        <div>27/03/2024</div>
+      </section>
+      <section>
+        <h3>Welcome to TidyCoder Site</h3>
+        <p>This site oriented to coding, learning, and announcement.</p>
+        <div>27/03/2024</div>
+      </section>
+      <section>
+        <h3>Welcome to TidyCoder Site</h3>
+        <p>This site oriented to coding, learning, and announcement.</p>
+        <div>27/03/2024</div>
+      </section>
+      <section>
+        <h3>Welcome to TidyCoder Site</h3>
+        <p>This site oriented to coding, learning, and announcement.</p>
+        <div>27/03/2024</div>
+      </section>
+    </main>
+    <hr/>
+    <footer>
+      <section>
+        <h2>Contact</h2>
+        <a href="https://tidy-coder.blogspot.com/" target="_blank">My blog</a>
+        <a href="https://github.com/Tidy-Coder" target="_blank">My github profile</a>
+        <a href="https://t.me/tidycoder_learning" target="_blank">My telegram canal</a>
+      </section>
+      <hr/>
+      <section>
+        <h2>Pages</h2>
+        <p>...</p>
+      </section>
+      <hr/>
+      <section>
+        <h2>About Me</h2>
+        <p>I'm like evolution, learning, production, I'm trying to become more and more professional...</p>
+      </section>
+    </footer>
+  </body>
+</html>
