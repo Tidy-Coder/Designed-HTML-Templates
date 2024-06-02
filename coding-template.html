@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Basic HTML page</title>
+    <style>
+:root{
+  --wanColor: #1e272e;
+  --twoColor: #2C3A47;
+  --threeColor: #f39c12;
+}
+body, html{
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  color: #ecf0f1;
+  font-family: monospace;
+	font-size: 15px;
+  background: var(--twoColor);
+}
+header, header > div, header > div > a, footer, footer > div, body, main{
+  display: flex;
+  flex-wrap: wrap;
+}
+body{
+  flex-direction: column;
+  justify-content: space-between;
+}
+header, header > div{
+  margin: 0;
+  padding: 0;
+}
+header{
+  background: var(--wanColor);
+  border-bottom: 1px solid black;
+}
+header > img{
+  float: left;
+}
+header > div > a{
+  border: 1px solid black;
+  background: var(--twoColor);
+  padding: 15px;
+  transition: 100ms all;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+header > div > a:hover{
+  background: #e74c3c;
+}
+header > div > a:active{
+  background: #c0392b;
+}
+header > div > p{
+  font-size: xx-large;
+  padding: 0;
+  color: #c0392b;
+  text-shadow: 1px 1px 9px #e74c3c;
+  margin: 0;
+}
+footer{
+  background: var(--wanColor);
+  padding: 15px;
+  margin: 0;
+  box-sizing: border-box;
+  gap: 15px;
+}
+footer > div{
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+main{
+  gap: 5vw;
+  padding: 5vw;
+	justify-content: center;
+	align-items: center;
+  text-align: center;
+}
+main > section{
+	max-width: 355px;
+}
+main > section > p{
+  border-radius: 9px;
+  padding: 5px 15px;
+	margin-top: 0;
+  background-color: var(--wanColor);
+}
+main > section > h3{
+  background: var(--threeColor);
+  border-radius: 1px;
+  border: 1px solid black;
+  font-size: medium;
+  font-family: Helvetica;
+  color: black;
+  text-decoration: underline;
+  font-weight: 500;
+  padding: 5px;
+	margin-bottom: 0;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div style="flex-grow: 3; align-items: center;">
+				<img src="https://tidy-coder.blogspot.com/favicon.ico"/>
+				<p>idyCoder</p>
+      </div>
+      <div style="flex-grow: 5; align-items: center;">
+        <a>Home</a>
+        <a>Projects</a>
+        <a>Entreprise</a>
+        <a>Contacts</a>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h3>Update of The Tidy programming language</h3>
+        <p>The IO library added to The Tidy programming language. Update now here or install!</p>
+      </section>
+      <section>
+        <h3>Update of The Tidy programming language</h3>
+        <p>The IO library added to The Tidy programming language. Update now here or install!</p>
+      </section>
+      <section>
+        <h3>Update of The Tidy programming language</h3>
+        <p>The IO library added to The Tidy programming language. Update now here or install!</p>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <h3>Entreprise</h3>
+        <a>Post</a>
+        <a>Localisation</a>
+      </div>
+      <div>
+        <h3>Projects</h3>
+        <a>The Tidy programming language</a>
+        <a>The Mongolang programming language</a>
+      </div>
+      <div>
+        <h3>Contacts</h3>
+        <a>On github</a>
+        <a>On codepen</a>
+        <a>On codier</a>
+        <a>Our blog</a>
+      </div>
+    </footer>
+  </body>
+</html>
