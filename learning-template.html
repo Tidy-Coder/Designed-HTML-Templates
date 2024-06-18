@@ -2,15 +2,30 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>TidyCoder learning</title>
+    <title>TidyCoder chars</title>
     <style>
-body > div{
-  min-height: 100vh;
+html{
+  scroll-snap-type: y mandatory;
+}
+body > div, footer{
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  height: 100vh;
+  overflow: auto;
   color: #d2dae2;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+footer a{
+  color: #aaa;
+  text-decoration: none;
+  margin: 3px;
+  padding: 3px;
+}
+footer a:hover{
+  color: #fff;
 }
 body{
   background: #1e272e;
@@ -20,7 +35,7 @@ body, html{
   margin: 0;
 }
 
-h1, body > div > h2{
+h1, body > * > h2{
   letter-spacing: 1vw;
 }
 p{
@@ -135,5 +150,22 @@ div:has(> .backgroundTidy){
       <h2>superior Quality</h2>
       <p>Courses of quality</p>
     </div>
+    <div>
+      <h2>For free</h2>
+      <p>Opensource/Free course.</p>
+    </div>
+    <div>
+      <h2>Certification is free</h2>
+      <p>You get a free certification.</p>
+    </div>
+    <footer>
+      <h2>About</h2>
+      <a href="#">Contact</a>
+      <a href="#">Courses</a>
+      <a href="#">Products</a>
+      <a href="#">Certification</a>
+      <a href="#">Contribute</a>
+      <a href="#">License</a>
+    </footer>
   </body>
 </html>
